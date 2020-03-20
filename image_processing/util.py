@@ -29,6 +29,13 @@ class UTIL():
         return f_year, f_month, f_day, f_hour, f_min, f_sec
 
 
+    def formated_current_time(self):
+        now = self.get_current_time()
+        date_f = now[0] + "-" + now[1] + "-" + now[2] 
+        time_f = now[3] + ":" + now[4] + ":" + now[5]
+        return date_f + "_" + time_f
+
+
     def remap_number(self, src, old_min, old_max, new_min, new_max):
         return ((src - old_min) / (old_max - old_min) * (new_max - new_min) + new_min)
 
